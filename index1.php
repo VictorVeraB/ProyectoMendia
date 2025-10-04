@@ -1,4 +1,5 @@
 <?php
+
 $host = 'db';
 $db   = getenv('DB_NAME') ?: 'miapp';
 $user = getenv('DB_USER') ?: 'miusuario';
@@ -15,4 +16,5 @@ try {
     http_response_code(500);
     echo "<h1>Error de conexión</h1><pre>{$e->getMessage()}</pre>";
 }
+
 phpinfo(INFO_MODULES);
