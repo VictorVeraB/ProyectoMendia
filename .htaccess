@@ -1,0 +1,9 @@
+Options All -Indexes
+RewriteEngine on
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^(.*)$ index.php?route=$1 [QSA,L]
+RewriteEngine On
+RewriteCond %{HTTP_HOST} ^www\.sist.sntelecom\.net.pe$
+RewriteCond %{HTTPS} !on
+RewriteRule ^(.*)$ https://sist.sntelecom.net.pe/$1 [R=301,L,NE]
